@@ -6014,14 +6014,20 @@ menu
 	}
 	button
 	{
-		area 80 8 71 102
+		area 80 8 142 204
 		portrait 0
 		bam rgpporl
 		ScaleToClip
 		enabled "Infinity_GetNumCharacters() > 0"
 		glow lua "draggedPortrait and draggedPortrait ~= 0"
 		action "Infinity_OnPortraitLClick(0)"
-		actionAlt "Infinity_OnPortraitRClick(0)"
+		actionAlt "		
+		 
+			text1 = Infinity_FetchString(12121)
+			text3 = Infinity_FetchString(17411)
+			Infinity_DisplayString("Barkskin "..text1)
+
+		"
 		actionDbl "Infinity_OnPortraitDblClick(0)"
 		actiondrag "Infinity_SwapWithPortrait(0)"
 		actionEnter "mouseOverPortrait = 0"
@@ -6033,7 +6039,7 @@ menu
 	}
 	button
 	{
-		area 80 111 71 102
+		area 80 221 142 204
 		portrait 1
 		bam rgpporl
 		ScaleToClip
@@ -6052,7 +6058,7 @@ menu
 	}
 	button
 	{
-		area 80 214 71 102
+		area 80 434 142 204
 		portrait 2
 		bam rgpporl
 		ScaleToClip
@@ -6071,7 +6077,7 @@ menu
 	}
 	button
 	{
-		area 80 317 71 102
+		area 80 647 142 204
 		portrait 3
 		bam rgpporl
 		ScaleToClip
@@ -6090,7 +6096,7 @@ menu
 	}
 	button
 	{
-		area 80 420 71 102
+		area 80 860 142 204
 		portrait 4
 		bam rgpporl
 		ScaleToClip
@@ -6109,7 +6115,7 @@ menu
 	}
 	button
 	{
-		area 80 523 71 102
+		area 80 1073 142 204
 		portrait 5
 		bam rgpporl
 		ScaleToClip
@@ -9285,8 +9291,8 @@ menu
 		table		"bookSpells"
 		var		currentBookSpell
 		scrollbar	'rgpscrl'
-		action	 "rgMemorizeMageSpell(0,'bookListMage')"
-		actionAlt 	"rgSpellDescString = characters[id].mageSpells[currentSpellLevel][currentBookSpell].description rgSpellIndex = currentBookSpell"
+		actionAlt	 "rgMemorizeMageSpell(0,'bookListMage')"
+		action	 	"rgSpellDescString = characters[id].mageSpells[currentSpellLevel][currentBookSpell].description rgSpellIndex = currentBookSpell"
 
 	}
 	list
@@ -9299,8 +9305,8 @@ menu
 		table		"bookSpells"
 		var		currentBookSpell
 		scrollbar	'rgpscrl'
-		action	 "rgMemorizeMageSpell(5,'bookListMage1')"
-		actionAlt 	"rgSpellDescString = characters[id].mageSpells[currentSpellLevel][currentBookSpell+5].description rgSpellIndex = currentBookSpell+5"
+		actionAlt	 "rgMemorizeMageSpell(5,'bookListMage1')"
+		action	 	"rgSpellDescString = characters[id].mageSpells[currentSpellLevel][currentBookSpell+5].description rgSpellIndex = currentBookSpell+5"
 	}
 	list
 	{
@@ -9312,8 +9318,8 @@ menu
 		table		"bookSpells"
 		var		currentBookSpell
 		scrollbar	'rgpscrl'
-		action	 "rgMemorizeMageSpell(10,'bookListMage2')"
-		actionAlt 	"rgSpellDescString = characters[id].mageSpells[currentSpellLevel][currentBookSpell+10].description rgSpellIndex = currentBookSpell+10"
+		actionAlt	 "rgMemorizeMageSpell(10,'bookListMage2')"
+		action	 	"rgSpellDescString = characters[id].mageSpells[currentSpellLevel][currentBookSpell+10].description rgSpellIndex = currentBookSpell+10"
 	}
 	list
 	{
@@ -9325,8 +9331,8 @@ menu
 		table		"bookSpells"
 		var		currentBookSpell
 		scrollbar	'rgpscrl'
-		action	 "rgMemorizeMageSpell(15,'bookListMage3')"
-		actionAlt 	"rgSpellDescString = characters[id].mageSpells[currentSpellLevel][currentBookSpell+15].description rgSpellIndex = currentBookSpell+15"
+		actionAlt	 "rgMemorizeMageSpell(15,'bookListMage3')"
+		action	 	"rgSpellDescString = characters[id].mageSpells[currentSpellLevel][currentBookSpell+15].description rgSpellIndex = currentBookSpell+15"
 	}
 	list
 	{
@@ -9338,8 +9344,8 @@ menu
 		table		"bookSpells"
 		var		currentBookSpell
 		scrollbar	'rgpscrl'
-		action	 "rgMemorizeMageSpell(20,'bookListMage4')"
-		actionAlt 	"rgSpellDescString = characters[id].mageSpells[currentSpellLevel][currentBookSpell+20].description  rgSpellIndex = currentBookSpell+20"
+		actionAlt	 "rgMemorizeMageSpell(20,'bookListMage4')"
+		action	 	"rgSpellDescString = characters[id].mageSpells[currentSpellLevel][currentBookSpell+20].description  rgSpellIndex = currentBookSpell+20"
 	}
 	--label
 	--{
@@ -10228,8 +10234,8 @@ menu
 		table		"characters[id].priestSpells[currentSpellLevel]"
 		var		currentBookSpell
 		scrollbar	'rgpscrl'
-		action		"rgMemorizePriestSpell(0,'bookListPriest')"
-		actionAlt 	"rgSpellDescString = characters[id].priestSpells[currentSpellLevel][currentBookSpell].description"
+		actionAlt		"rgMemorizePriestSpell(0,'bookListPriest')"
+		action	 	"rgSpellDescString = characters[id].priestSpells[currentSpellLevel][currentBookSpell].description"
 
 	}
 	list
@@ -10242,8 +10248,8 @@ menu
 		table		"characters[id].priestSpells[currentSpellLevel]"
 		var		currentBookSpell
 		scrollbar	'rgpscrl'
-		action		"rgMemorizePriestSpell(5,'bookListPriest1')"
-		actionAlt 	"rgSpellDescString = characters[id].priestSpells[currentSpellLevel][currentBookSpell+5].description"
+		actionAlt		"rgMemorizePriestSpell(5,'bookListPriest1')"
+		action	 	"rgSpellDescString = characters[id].priestSpells[currentSpellLevel][currentBookSpell+5].description"
 	}
 	list
 	{
@@ -10255,8 +10261,8 @@ menu
 		table		"characters[id].priestSpells[currentSpellLevel]"
 		var		currentBookSpell
 		scrollbar	'rgpscrl'
-		action		"rgMemorizePriestSpell(10,'bookListPriest2')"
-		actionAlt 	"rgSpellDescString = characters[id].priestSpells[currentSpellLevel][currentBookSpell+10].description"
+		actionAlt	"rgMemorizePriestSpell(10,'bookListPriest2')"
+		action	 	"rgSpellDescString = characters[id].priestSpells[currentSpellLevel][currentBookSpell+10].description"
 	}
 	list
 	{
@@ -10268,8 +10274,8 @@ menu
 		table		"characters[id].priestSpells[currentSpellLevel]"
 		var		currentBookSpell
 		scrollbar	'rgpscrl'
-		action		"rgMemorizePriestSpell(15,'bookListPriest3')"
-		actionAlt 	"rgSpellDescString = characters[id].priestSpells[currentSpellLevel][currentBookSpell+15].description"
+		actionAlt		"rgMemorizePriestSpell(15,'bookListPriest3')"
+		action	 	"rgSpellDescString = characters[id].priestSpells[currentSpellLevel][currentBookSpell+15].description"
 	}
 	list
 	{
@@ -10281,8 +10287,8 @@ menu
 		table		"characters[id].priestSpells[currentSpellLevel]"
 		var		currentBookSpell
 		scrollbar	'rgpscrl'
-		action		"rgMemorizePriestSpell(20,'bookListPriest4')"
-		actionAlt 	"rgSpellDescString = characters[id].priestSpells[currentSpellLevel][currentBookSpell+20].description"
+		actionAlt		"rgMemorizePriestSpell(20,'bookListPriest4')"
+		action	 	"rgSpellDescString = characters[id].priestSpells[currentSpellLevel][currentBookSpell+20].description"
 	}
 
 	text
@@ -11874,7 +11880,7 @@ menu
 		table		"store.storeItems"
 		var			"storeItemsVar"
 		scrollbar 'rgpscrl'
-		action
+		actionAlt
 		"
 			if not storeScreen:IsContainer() then
 				if not storeScreen:IsCloseBagButtonClickable() or store.storeItems[storeItemsVar].valid == 1 then
@@ -11895,7 +11901,7 @@ menu
 				end	
 			end
 		"
-		actionalt
+		action
 		"
 			showItemDescription(store.storeItems[storeItemsVar].item, 1, 1)
 		"
@@ -11966,7 +11972,7 @@ menu
 		table		"store.groupItems"
 		var			"storeGroupItemsVar"
 		scrollbar 'rgpscrl'
-		action
+		actionAlt
 		"
 			if store.groupItems[storeGroupItemsVar].valid ~= 0 then
 				if (store.groupItems[storeGroupItemsVar].highlight == 1) then
@@ -11983,7 +11989,7 @@ menu
 				end
 			end
 		"
-		actionalt
+		action
 		"
 			showItemDescription(store.groupItems[storeGroupItemsVar].item, 1)
 		"
@@ -12052,7 +12058,7 @@ menu
 		table		"store.groupItems"
 		var			"storeGroupItemsVar"
 		scrollbar 'rgpscrl'
-		action
+		actionAlt
 		"
 			if store.groupItems[storeGroupItemsVar].valid ~= 0 then
 				if (store.groupItems[storeGroupItemsVar].highlight == 1) then
@@ -12069,7 +12075,7 @@ menu
 				end
 			end
 		"
-		actionalt
+		action
 		"
 			showItemDescription(store.groupItems[storeGroupItemsVar].item, 1)
 		"
@@ -12755,14 +12761,14 @@ menu
 		table		"store.healingSpells"
 		var			"healingSpellsVar"
 		scrollbar 'rgpscrl'
-		action
+		actionAlt
 		"
 			local highlight = true
 			if(store.healingSpells[healingSpellsVar].highlight == 1) then highlight = false end
 			if(highlight == true and store.healingSpells[healingSpellsVar].valid == 0) then return end
 			storeScreen:SelectSpellItem( healingSpellsVar - 1,  highlight)
 		"
-		actionAlt
+		action
 		"
 			local spell = store.healingSpells[healingSpellsVar]
 			popupDetails(16189, spell.name, spell.description,spell.icon)
@@ -13273,8 +13279,8 @@ menu
 		actionBar 7
 		enabled "buttonArray:GetButtonEnabled(7)"
 		tooltip lua "actionBarTooltip[7]"
-		action "buttonArray:OnLButtonPressed(7)"
-		actionAlt "buttonArray:OnRButtonPressed(7)"
+		actionAlt "buttonArray:OnLButtonPressed(7)"
+		action "buttonArray:OnRButtonPressed(7)"
 	}
 	
 	button
@@ -13315,7 +13321,7 @@ menu
 	}
 	button
 	{
-		area 1047 0 87 87
+		area 1134 0 87 87
 		bam rgpguils
 		sequence 16
 		action
@@ -13338,7 +13344,7 @@ menu
 	}
 	button
 	{
-		area 1134 0 87 87
+		area 1047 0 87 87
 		bam rgpguils
 		sequence 13
 		action
@@ -13674,8 +13680,8 @@ menu
 		icon lua	"getContainerItemProperty(0,'icon')"
 		count lua	"getContainerItemProperty(0,'count')"
 		usages lua	"getContainerItemProperty(0,'usages')"
-		action		"worldScreen:OnContainerButtonClick(0)"
-		actionAlt	"showContainerItemDescription(0)"
+		actionAlt	"worldScreen:OnContainerButtonClick(0)"
+		action		"showContainerItemDescription(0)"
 		actionScroll "scrollContainerItems()"
 	}
 	button
@@ -13687,8 +13693,8 @@ menu
 		icon lua	"getContainerItemProperty(1,'icon')"
 		count lua	"getContainerItemProperty(1,'count')"
 		usages lua	"getContainerItemProperty(1,'usages')"
-		action		"worldScreen:OnContainerButtonClick(1)"
-		actionAlt	"showContainerItemDescription(1)"
+		actionAlt	"worldScreen:OnContainerButtonClick(1)"
+		action		"showContainerItemDescription(1)"
 		actionScroll "scrollContainerItems()"
 	}
 	button
@@ -13700,8 +13706,8 @@ menu
 		icon lua	"getContainerItemProperty(2,'icon')"
 		count lua	"getContainerItemProperty(2,'count')"
 		usages lua	"getContainerItemProperty(2,'usages')"
-		action		"worldScreen:OnContainerButtonClick(2)"
-		actionAlt	"showContainerItemDescription(2)"
+		actionAlt	"worldScreen:OnContainerButtonClick(2)"
+		action		"showContainerItemDescription(2)"
 		actionScroll "scrollContainerItems()"
 	}
 	button
@@ -13713,8 +13719,8 @@ menu
 		icon lua	"getContainerItemProperty(3,'icon')"
 		count lua	"getContainerItemProperty(3,'count')"
 		usages lua	"getContainerItemProperty(3,'usages')"
-		action		"worldScreen:OnContainerButtonClick(3)"
-		actionAlt	"showContainerItemDescription(3)"
+		actionAlt	"worldScreen:OnContainerButtonClick(3)"
+		action		"showContainerItemDescription(3)"
 		actionScroll "scrollContainerItems()"
 	}
 	button
@@ -13726,8 +13732,8 @@ menu
 		icon lua	"getContainerItemProperty(4,'icon')"
 		count lua	"getContainerItemProperty(4,'count')"
 		usages lua	"getContainerItemProperty(4,'usages')"
-		action		"worldScreen:OnContainerButtonClick(4)"
-		actionAlt	"showContainerItemDescription(4)"
+		actionAlt	"worldScreen:OnContainerButtonClick(4)"
+		action		"showContainerItemDescription(4)"
 		actionScroll "scrollContainerItems()"
 	}
 	button
@@ -13739,8 +13745,8 @@ menu
 		icon lua	"getContainerItemProperty(5,'icon')"
 		count lua	"getContainerItemProperty(5,'count')"
 		usages lua	"getContainerItemProperty(5,'usages')"
-		action		"worldScreen:OnContainerButtonClick(5)"
-		actionAlt	"showContainerItemDescription(5)"
+		actionAlt	"worldScreen:OnContainerButtonClick(5)"
+		action		"showContainerItemDescription(5)"
 		actionScroll "scrollContainerItems()"
 	}
 	button
@@ -13796,8 +13802,8 @@ menu
 		icon lua	"getGroupItemProperty(0,'icon')"
 		count lua	"getGroupItemProperty(0,'count')"
 		usages lua	"getGroupItemProperty(0,'usages')"
-		action		"worldScreen:OnContainerButtonClick(10)"
-		actionAlt	"showGroupItemDescription(0)"
+		actionAlt	"worldScreen:OnContainerButtonClick(10)"
+		action		"showGroupItemDescription(0)"
 		actionScroll "scrollGroupItems()"
 	}
 	button
@@ -13809,8 +13815,8 @@ menu
 		icon lua	"getGroupItemProperty(1,'icon')"
 		count lua	"getGroupItemProperty(1,'count')"
 		usages lua	"getGroupItemProperty(1,'usages')"
-		action		"worldScreen:OnContainerButtonClick(11)"
-		actionAlt	"showGroupItemDescription(1)"
+		actionAlt	"worldScreen:OnContainerButtonClick(11)"
+		action		"showGroupItemDescription(1)"
 		actionScroll "scrollGroupItems()"
 	}
 	button
@@ -13822,8 +13828,8 @@ menu
 		icon lua	"getGroupItemProperty(2,'icon')"
 		count lua	"getGroupItemProperty(2,'count')"
 		usages lua	"getGroupItemProperty(2,'usages')"
-		action		"worldScreen:OnContainerButtonClick(12)"
-		actionAlt	"showGroupItemDescription(2)"
+		actionAlt	"worldScreen:OnContainerButtonClick(12)"
+		action		"showGroupItemDescription(2)"
 		actionScroll "scrollGroupItems()"
 	}
 	button
@@ -13835,8 +13841,8 @@ menu
 		icon lua	"getGroupItemProperty(3,'icon')"
 		count lua	"getGroupItemProperty(3,'count')"
 		usages lua	"getGroupItemProperty(3,'usages')"
-		action		"worldScreen:OnContainerButtonClick(13)"
-		actionAlt	"showGroupItemDescription(3)"
+		actionAlt	"worldScreen:OnContainerButtonClick(13)"
+		action		"showGroupItemDescription(3)"
 		actionScroll "scrollGroupItems()"
 	}
 	button
@@ -13959,7 +13965,7 @@ menu
 	}
 	button
 	{
-		area 178 7 74 74
+		area 200 5 85 85
 		bam stonslot
 		ScaleToClip
 		enabled "getSlotContainerId(0)"
@@ -13968,14 +13974,14 @@ menu
 		icon lua	"getGroundItemProperty(0,'icon')"
 		count lua	"getGroundItemProperty(0,'count')"
 		usages lua	"getGroundItemProperty(0,'usages')"
-		action "groundItemClick(0)"
-		actionAlt "showGroundItemDescription(0)"
+		actionAlt	 "groundItemClick(0)"
+		action		 "showGroundItemDescription(0)"
 		actionEnter "mouseOverQuicklootContainer = getSlotContainerId(0,'containerId')"
 		actionExit "mouseOverQuicklootContainer = nil"
 	}
 	button
 	{
-		area 253 7 74 74
+		area 290 5 85 85
 		bam stonslot
 		ScaleToClip
 		enabled "getSlotContainerId(1)"
@@ -13984,14 +13990,14 @@ menu
 		icon lua	"getGroundItemProperty(1,'icon')"
 		count lua	"getGroundItemProperty(1,'count')"
 		usages lua	"getGroundItemProperty(1,'usages')"
-		action "groundItemClick(1)"
-		actionAlt "showGroundItemDescription(1)"
+		actionAlt	 "groundItemClick(1)"
+		action		 "showGroundItemDescription(1)"
 		actionEnter "mouseOverQuicklootContainer = getSlotContainerId(1,'containerId')"
 		actionExit "mouseOverQuicklootContainer = nil"
 	}
 	button
 	{
-		area 328 7 74 74
+		area 380 5 85 85
 		bam stonslot
 		ScaleToClip
 		enabled "getSlotContainerId(2)"
@@ -14000,14 +14006,14 @@ menu
 		icon lua	"getGroundItemProperty(2,'icon')"
 		count lua	"getGroundItemProperty(2,'count')"
 		usages lua	"getGroundItemProperty(2,'usages')"
-		action "groundItemClick(2)"
-		actionAlt "showGroundItemDescription(2)"
+		actionAlt "groundItemClick(2)"
+		action	 "showGroundItemDescription(2)"
 		actionEnter "mouseOverQuicklootContainer = getSlotContainerId(2,'containerId')"
 		actionExit "mouseOverQuicklootContainer = nil"
 	}
 	button
 	{
-		area 403 7 74 74
+		area 470 5 85 85
 		bam stonslot
 		ScaleToClip
 		enabled "getSlotContainerId(3)"
@@ -14016,14 +14022,14 @@ menu
 		icon lua	"getGroundItemProperty(3,'icon')"
 		count lua	"getGroundItemProperty(3,'count')"
 		usages lua	"getGroundItemProperty(3,'usages')"
-		action "groundItemClick(3)"
-		actionAlt "showGroundItemDescription(3)"
+		actionAlt "groundItemClick(3)"
+		action	 "showGroundItemDescription(3)"
 		actionEnter "mouseOverQuicklootContainer = getSlotContainerId(3,'containerId')"
 		actionExit "mouseOverQuicklootContainer = nil"
 	}
 	button
 	{
-		area 478 7 74 74
+		area 560 5 85 85
 		bam stonslot
 		ScaleToClip
 		enabled "getSlotContainerId(4)"
@@ -14032,14 +14038,14 @@ menu
 		icon lua	"getGroundItemProperty(4,'icon')"
 		count lua	"getGroundItemProperty(4,'count')"
 		usages lua	"getGroundItemProperty(4,'usages')"
-		action "groundItemClick(4)"
-		actionAlt "showGroundItemDescription(4)"
+		actionAlt "groundItemClick(4)"
+		action	 "showGroundItemDescription(4)"
 		actionEnter "mouseOverQuicklootContainer = getSlotContainerId(4,'containerId')"
 		actionExit "mouseOverQuicklootContainer = nil"
 	}
 	button
 	{
-		area 553 7 74 74
+		area 650 5 85 85
 		bam stonslot
 		ScaleToClip
 		enabled "getSlotContainerId(5)"
@@ -14048,14 +14054,14 @@ menu
 		icon lua	"getGroundItemProperty(5,'icon')"
 		count lua	"getGroundItemProperty(5,'count')"
 		usages lua	"getGroundItemProperty(5,'usages')"
-		action "groundItemClick(5)"
-		actionAlt "showGroundItemDescription(5)"
+		actionAlt	 "groundItemClick(5)"
+		action	 "showGroundItemDescription(5)"
 		actionEnter "mouseOverQuicklootContainer = getSlotContainerId(5,'containerId')"
 		actionExit "mouseOverQuicklootContainer = nil"
 	}
 	button
 	{
-		area 628 7 74 74
+		area 740 5 85 85
 		bam stonslot
 		ScaleToClip
 		enabled "getSlotContainerId(6)"
@@ -14064,14 +14070,14 @@ menu
 		icon lua	"getGroundItemProperty(6,'icon')"
 		count lua	"getGroundItemProperty(6,'count')"
 		usages lua	"getGroundItemProperty(6,'usages')"
-		action "groundItemClick(6)"
-		actionAlt "showGroundItemDescription(6)"
+		actionAlt "groundItemClick(6)"
+		action	 "showGroundItemDescription(6)"
 		actionEnter "mouseOverQuicklootContainer = getSlotContainerId(6,'containerId')"
 		actionExit "mouseOverQuicklootContainer = nil"
 	}
 	button
 	{
-		area 703 7 74 74
+		area 830 5 85 85
 		bam stonslot
 		ScaleToClip
 		enabled "getSlotContainerId(7)"
@@ -14080,14 +14086,14 @@ menu
 		icon lua	"getGroundItemProperty(7,'icon')"
 		count lua	"getGroundItemProperty(7,'count')"
 		usages lua	"getGroundItemProperty(7,'usages')"
-		action "groundItemClick(7)"
-		actionAlt "showGroundItemDescription(7)"
+		actionAlt "groundItemClick(7)"
+		action	 "showGroundItemDescription(7)"
 		actionEnter "mouseOverQuicklootContainer = getSlotContainerId(7,'containerId')"
 		actionExit "mouseOverQuicklootContainer = nil"
 	}
 	button
 	{
-		area 778 7 74 74
+		area 920 5 85 85
 		bam stonslot
 		ScaleToClip
 		enabled "getSlotContainerId(8)"
@@ -14096,14 +14102,14 @@ menu
 		icon lua	"getGroundItemProperty(8,'icon')"
 		count lua	"getGroundItemProperty(8,'count')"
 		usages lua	"getGroundItemProperty(8,'usages')"
-		action "groundItemClick(8)"
-		actionAlt "showGroundItemDescription(8)"
+		actionAlt "groundItemClick(8)"
+		action	 "showGroundItemDescription(8)"
 		actionEnter "mouseOverQuicklootContainer = getSlotContainerId(8,'containerId')"
 		actionExit "mouseOverQuicklootContainer = nil"
 	}
 	button
 	{
-		area 853 7 74 74
+		area 1010 5 85 85
 		bam stonslot
 		ScaleToClip
 		enabled "getSlotContainerId(9)"
@@ -14112,8 +14118,8 @@ menu
 		icon lua	"getGroundItemProperty(9,'icon')"
 		count lua	"getGroundItemProperty(9,'count')"
 		usages lua	"getGroundItemProperty(9,'usages')"
-		action "groundItemClick(9)"
-		actionAlt "showGroundItemDescription(9)"
+		actionAlt "groundItemClick(9)"
+		action	 "showGroundItemDescription(9)"
 		actionEnter "mouseOverQuicklootContainer = getSlotContainerId(9,'containerId')"
 		actionExit "mouseOverQuicklootContainer = nil"
 	}	
@@ -15033,7 +15039,7 @@ menu
 	label
 	{
 		name 'messagesRect'
-		area 1500 92 351 583
+		area 5 140 600 800
 		bam rgpmess
 		ScaleToClip
 	}
@@ -15059,16 +15065,16 @@ menu
 	{
 		column
 		{
-			width 100
+			width 400
 			label
 			{
-				area 0 0 334 -1
+				area 15 0 575 -1
 					text lua "getMessageBoxTextWithoutPauseInfo()"
 					text style "gamelog"
 			}
 		}
-		name "worldMessageBox"
-		area 1500 99 334 569
+		name "worldMessageBox" 
+		area 8,145,575,775
 		rowheight dynamic
 		table "combatLog"
 		hideHighlight
@@ -15089,7 +15095,7 @@ menu
 	text
 	{
 		name 'worldLastMessageBox'
-		area 5 630 410 40
+		area 5 1530 410 40
 		text lua "getLastMessageBoxWidth()"
 		text style "normal"
 		text point 12
@@ -15102,19 +15108,19 @@ menu
 	button
 	{
 		name "rgOpenMessages"
-	 	area 3 3 87 87
+	 	area 3 3 157 157
 		bam rgpguils
 		sequence 15
 		action
 		"
-			--Infinity_SetArea('messagesRect',5,nil,nil,nil)
-			--Infinity_SetArea('worldMessageBox',16,nil,nil,nil)
+			--Infinity_SetArea('messagesRect',5,nil,600,800)
+			--Infinity_SetArea('worldMessageBox',16,nil,575,775)
 			local x,y,w,h = Infinity_GetArea('messagesRect')
 			local screenWidth, screenHeight = Infinity_GetScreenSize()
 			if (x == screenWidth+5) then
-				Infinity_SetArea('messagesRect',5,nil,nil,nil)
-				Infinity_SetArea('worldMessageBox',16,nil,nil,nil)
-				Infinity_SetArea('worldLastMessageBox',screenWidth+5,nil,nil,nil)
+				Infinity_SetArea('messagesRect',5,nil,600,800)
+				Infinity_SetArea('worldMessageBox',16,nil,575,775)
+				Infinity_SetArea('worldLastMessageBox',screenWidth+15,nil,nil,nil)
 			else
 				Infinity_SetArea('messagesRect',screenWidth+5,nil,nil,nil)
 				Infinity_SetArea('worldMessageBox',screenWidth+5,nil,nil,nil)
@@ -15125,7 +15131,7 @@ menu
 	
 	button
 	{
-	 	area 90 3 87 87
+	 	area 100 3 157 157
 		bam rgpguils
 		sequence 14
 		toggle groundItemsButtonToggle
@@ -15280,7 +15286,7 @@ menu
 menu
 {
 	name 'WORLD_DIALOG'
-	--offset 0 -57
+	--offset 0 257
 	align center center
 	ignoreEsc
 	onOpen
@@ -25439,4 +25445,4 @@ menu
 			currentButtonHelp = 25 + buttonArray:GetButtonType(11)
 		"
 	}
-}
+}
